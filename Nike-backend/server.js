@@ -18,3 +18,25 @@ connectDB();
 //skapar en express-server
 const app = express();
 
+
+//middleware för att läsa json från body
+
+//tillåt anrop från frontend på port 5173
+app.use(cors({
+    origin: "http://localhost:5173",
+}),
+);
+
+
+//Routes
+
+
+
+
+
+//starta server
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Servern är igång på på ${PORT}`);
+});
