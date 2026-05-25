@@ -135,8 +135,9 @@
 
 .productGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 300px);
   gap: 20px;
+  justify-content: center;
 }
 
 /* PRODUCT CARD */
@@ -191,9 +192,93 @@
 }
 
 /* FOOTER */
+/* FOOTER */
 .footer {
+  background-color: #1A1A1A;
+  padding: 40px 100px 0;
   width: 100%;
-  height: 200px;
-  background: rgba(126, 91, 91, 0.37);
-  border: 1px solid #000000;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #2A2A2A;
+}
+
+.footerLogo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #F5F0E8;
+  font-family: serif;
+  letter-spacing: 0.08em;
+}
+
+.footerNavTitle {
+  font-size: 10px;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footerLink {
+  display: block;
+  font-size: 12px;
+  color: #AAA;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #F5F0E8;
+}
+
+.footerBottom {
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footerBottom p {
+  font-size: 11px;
+  color: #444;
+  letter-spacing: 0.06em;
+}
+
+
+/* FILTER */
+.filterRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 16px 0;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid #AE7474;
+  border-radius: 20px;
+  padding: 10px 32px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #000000;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.2s;
+}
+
+.filterBtn.active {
+  background: #AE7474;
+  color: #000000;
+}
+
+.filterBtn:hover {
+  background: #AE7474;
+  color: #000000;
 }

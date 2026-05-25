@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getProducts } from '../services/api'
 import heroImg from '../assets/002-nike-logos-swoosh-white.jpg'
+import Footer from '../components/Footer'
 
 function Home() {
   const [products, setProducts] = useState([])
@@ -44,7 +45,7 @@ function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="footer"></footer>
+      <Footer/>
 
     </div>
   )
