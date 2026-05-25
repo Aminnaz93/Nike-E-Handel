@@ -4,7 +4,6 @@ const express = require("express");
 //dotenv = läsa vad som står i .env filen
 const dotenv = require("dotenv").config();
 
-//Importera routes
 
 //cors är ett paket som låter min frontend prata med backend när dem körs på olika portar. (frontend kan göra anrop från port5173) till backend (port 3000)
 const cors = require("cors");
@@ -29,9 +28,11 @@ app.use(cors({
 );
 
 
+//Importera routes
 //Routes
-
-
+app.use("/api/products", require("./routes/productRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/orders" , require("./routes/orderRoutes"));
 
 
 

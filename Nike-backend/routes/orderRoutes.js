@@ -15,4 +15,3 @@ router.get("/", validateToken,getOrder);
 
 module.exports = router;
 
-
