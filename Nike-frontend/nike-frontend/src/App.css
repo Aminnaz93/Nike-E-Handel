@@ -1,0 +1,72 @@
+/* NAVBAR */
+.navbar {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 120px;
+}
+
+.logo a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: serif;
+}
+
+.links {
+  display: flex;
+  gap: 48px;
+}
+
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: #AAA;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.loginBtn {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+  border: 1px solid #FFFAFA;
+  border-radius: 20px;
+  padding: 11px 32px;
+  text-transform: uppercase;
+}
+
+.loginBtn:hover {
+  background-color: #1A1A1A;
+}
+
+.cartBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.cartIcon {
+  height: 28px;
+  width: auto;
+}
