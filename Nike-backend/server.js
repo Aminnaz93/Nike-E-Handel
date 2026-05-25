@@ -20,6 +20,7 @@ const app = express();
 
 
 //middleware för att läsa json från body
+app.use(express.json());
 
 //tillåt anrop från frontend på port 5173
 app.use(cors({
