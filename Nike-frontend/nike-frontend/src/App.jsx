@@ -4,6 +4,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import ProductLista from './pages/ProductLista'
+import Cart from './pages/Cart'
+
 
 function App() {
   
@@ -14,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/products' element={<ProductLista />} />
-
+        <Route path='/cart' element={<Cart />} />
       </Routes>
     </BrowserRouter>
 

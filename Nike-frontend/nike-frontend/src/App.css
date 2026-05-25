@@ -282,3 +282,144 @@
   background: #AE7474;
   color: #000000;
 }
+
+
+
+
+/* CART */
+.cartSection {
+  padding: 40px 100px;
+  background: rgba(102, 58, 58, 0.17);
+  min-height: 400px;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #FFFFFF;
+  padding: 16px;
+  border: 1px solid #000000;
+}
+
+.cartItemImg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.cartItemInfo {
+  flex: 1;
+}
+
+.cartItemName {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qtyBtn {
+  background: #AE7474;
+  border: none;
+  color: #000000;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.qtyNum {
+  font-size: 16px;
+  color: #000000;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #000000;
+  padding: 8px;
+}
+
+.cartSummary {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #DDD;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0;
+}
+
+.checkoutBtn {
+  display: block;
+  width: 100%;
+  background: #AE7474;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 200;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.checkoutBtn:hover {
+  background: #8B5B5B;
+  color: #FFFFFF;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.emptyCart p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.continueShopping {
+  color: #AE7474;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid #AE7474;
+  padding: 10px 24px;
+  border-radius: 20px;
+}

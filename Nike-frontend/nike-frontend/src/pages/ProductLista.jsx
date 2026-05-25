@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react'
 import { getProducts } from '../services/api'
 import heroImg from '../assets/002-nike-logos-swoosh-white.jpg'
 import Footer from '../components/Footer'
+import { useCart } from '../context/CartContext'
+
 
 function ProductLista() {
+
+  const { addToCart } = useCart()
+
+
   const [products, setProducts] = useState([])
   const [filter, setFilter] = useState('alla')
 
@@ -50,7 +56,7 @@ function ProductLista() {
               <div className="productInfo">
                 <p className="productName">{product.name}</p>
                 <p className="productPrice">{product.price}kr</p>
-                <button className="addToCartBtn">LÄGG I KORG</button>
+                <button className="addToCartBtn" onClick={() => addToCart(product)}>LÄGG I KORG</button>
               </div>
             </div>
           ))}
