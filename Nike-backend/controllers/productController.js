@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 //(Product) = modellen från models/Product.js
 //används för att prata med products-tabellen i databasen
-const Product = require("../models/Product");
+const Product = require("../models/productModels");
 
 
 //Hämta alla produkter
