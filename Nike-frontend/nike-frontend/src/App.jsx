@@ -10,7 +10,7 @@ import Register from './pages/Register'
 import Checkout from './pages/Checkout'
 import Confirmation from './pages/Confirmation'
 import Orders from './pages/Orders'
-
+import Contact from './pages/Contact'
 
 
 
@@ -30,6 +30,7 @@ function App() {
         <Route path='/checkout' element={<Checkout />} />
         <Route path='confirmation' element={<Confirmation />} />
         <Route path='/orders' element={<Orders />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>
 
