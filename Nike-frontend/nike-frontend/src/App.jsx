@@ -9,6 +9,8 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Checkout from './pages/Checkout'
 import Confirmation from './pages/Confirmation'
+import Orders from './pages/Orders'
+
 
 
 
@@ -27,6 +29,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/checkout' element={<Checkout />} />
         <Route path='confirmation' element={<Confirmation />} />
+        <Route path='/orders' element={<Orders />} />
       </Routes>
     </BrowserRouter>
 

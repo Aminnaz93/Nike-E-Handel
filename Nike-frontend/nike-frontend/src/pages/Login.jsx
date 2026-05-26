@@ -2,13 +2,12 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Footer from '../components/Footer'
+import { useAuth } from '../context/AuthContext'
 
 function Login() {
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  })
+  const { login } = useAuth()
+  const [formData, setFormData] = useState({ email: '', password: '' })
   const [error, setError] = useState('')
 
   const handleChange = (e) => {
@@ -19,11 +18,10 @@ function Login() {
     e.preventDefault()
     try {
       const response = await axios.post('http://localhost:3000/api/users/login', formData)
-      localStorage.setItem('token', response.data.accessToken)
-      localStorage.setItem('user', JSON.stringify({
+      login(response.data.accessToken, {
         name: response.data.name,
         email: response.data.email
-      }))
+      })
       navigate('/')
     } catch (error) {
       setError('Fel email eller lösenord')
@@ -42,27 +40,15 @@ function Login() {
           <form onSubmit={handleSubmit}>
             <div className="formGroup">
               <label className="formLabel">Email</label>
-              <input
-                className="formInput"
-                type="email"
-                name="email"
-                placeholder="din@email.se"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
+              <input className="formInput" type="email" name="email"
+                placeholder="din@email.se" value={formData.email}
+                onChange={handleChange} required />
             </div>
             <div className="formGroup">
               <label className="formLabel">Lösenord</label>
-              <input
-                className="formInput"
-                type="password"
-                name="password"
-                placeholder="••••••••"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
+              <input className="formInput" type="password" name="password"
+                placeholder="••••••••" value={formData.password}
+                onChange={handleChange} required />
             </div>
             <button type="submit" className="authBtn">LOGGA IN</button>
           </form>

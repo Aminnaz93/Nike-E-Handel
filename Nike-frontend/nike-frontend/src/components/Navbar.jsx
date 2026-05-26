@@ -1,19 +1,17 @@
 import { Link, useNavigate } from 'react-router-dom'
 import cartIcon from '../assets/Skärmavbild 2026-05-25 kl. 18.03.19.png'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 import { useState } from 'react'
 
 function Navbar() {
   const { cartCount } = useCart()
+  const { user, isLoggedIn, logout } = useAuth()
   const navigate = useNavigate()
   const [dropdown, setDropdown] = useState(false)
 
-  const user = JSON.parse(localStorage.getItem('user'))
-  const isLoggedIn = !!localStorage.getItem('token')
-
   const handleLogout = () => {
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
+    logout()
     setDropdown(false)
     navigate('/')
   }

@@ -787,3 +787,55 @@
 .dropdownLogout:hover {
   background: #2A2A2A;
 }
+
+
+
+/* ORDERS */
+.ordersSection {
+  padding: 40px 100px;
+  background: rgba(102, 58, 58, 0.17);
+  min-height: 600px;
+}
+
+.orderCard {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #DDD;
+}
+
+.orderItems {
+  margin-bottom: 12px;
+}
+
+.orderRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #444;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1A1A1A;
+  padding-top: 12px;
+  margin-top: 6px;
+}
