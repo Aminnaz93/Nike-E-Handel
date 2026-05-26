@@ -104,7 +104,7 @@ const loginUser = asyncHandler(async(req,res) => {
             {expiresIn: "1d"}
         );
 
-        res.status(200).json({accessToken});
+        res.status(200).json({ accessToken, name: user.name, email: user.email });
     } else{
         res.status(401);
         throw new Error("Email eller lösenord är fel");

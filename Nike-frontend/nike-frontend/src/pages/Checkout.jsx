@@ -43,9 +43,8 @@ function Checkout() {
         }
       })
 
-      // Gå till bekräftelsesidan
-      clearCart();
-      navigate('/confirmation')
+      clearCart()
+      navigate(`/confirmation?total=${totalPrice}`)
     } catch (error) {
       setError('Något gick fel. Är du inloggad?')
     }
@@ -59,8 +58,6 @@ function Checkout() {
         {error && <p className="authError">{error}</p>}
 
         <div className="checkoutGrid">
-
-          {/* Formulär */}
           <form onSubmit={handleSubmit} className="checkoutForm">
             <div className="formGroup">
               <label className="formLabel">Namn</label>
@@ -99,7 +96,6 @@ function Checkout() {
               />
             </div>
 
-            {/* Betalsätt */}
             <div className="formGroup">
               <label className="formLabel">Betalsätt</label>
               <div className="paymentOptions">
@@ -116,7 +112,6 @@ function Checkout() {
               </div>
             </div>
 
-            {/* Kortuppgifter */}
             {paymentMethod === 'kontokort' && (
               <div className="cardDetails">
                 <div className="formGroup">
@@ -136,7 +131,6 @@ function Checkout() {
               </div>
             )}
 
-            {/* Totalt */}
             <div className="checkoutTotal">
               <div className="summaryRow">
                 <span>Frakt</span>

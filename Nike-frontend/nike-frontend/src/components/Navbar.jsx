@@ -18,10 +18,6 @@ function Navbar() {
     navigate('/')
   }
 
-  const initials = user?.name
-    ? user.name.split(' ').map(n => n[0]).join('').toUpperCase()
-    : ''
-
   return ( 
     <nav className="navbar">
       <div className="logo">
@@ -36,8 +32,8 @@ function Navbar() {
       <div className="right">
         {isLoggedIn ? (
           <div className="avatarWrapper">
-            <div className="avatar" onClick={() => setDropdown(!dropdown)}>
-              {initials}
+            <div className="loginBtn" onClick={() => setDropdown(!dropdown)}>
+              INLOGGAD
             </div>
             {dropdown && (
               <div className="dropdown">

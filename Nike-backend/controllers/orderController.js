@@ -11,7 +11,7 @@ const createOrder = asyncHandler(async(req,res) => {
 
 
     //validera input
-    if(!items || !totalPrice || paymentMethod){
+    if(!items || !totalPrice || !paymentMethod){
         res.status(400);
         throw new Error("Snälla fyll i alla fält!");
     }
