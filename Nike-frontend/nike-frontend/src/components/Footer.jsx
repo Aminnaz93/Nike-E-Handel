@@ -19,7 +19,7 @@ function Footer() {
         </div>
       </div>
       <div className="footerBottom">
-        <p>© 2026 Nike Shop. Alla rättigheter förbehållna.</p>
+        <p>© 2026 Nike, Inc. All rights reserved</p>
       </div>
     </footer>
   )
