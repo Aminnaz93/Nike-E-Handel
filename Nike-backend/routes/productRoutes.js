@@ -10,7 +10,7 @@ router.get("/", getAllProducts);
 
 
 //GET /api/products/:id - hämta en produkt efter id(Public)
-router.get(":id", getProductById);
+router.get("/:id", getProductById);
 
 
 module.exports = router;
