@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 function Checkout() {
   const navigate = useNavigate()
-  const { cartItems, totalPrice } = useCart()
+  const { cartItems, totalPrice, clearCart } = useCart()
   const [paymentMethod, setPaymentMethod] = useState('kontokort')
   const [error, setError] = useState('')
   const [formData, setFormData] = useState({
@@ -44,6 +44,7 @@ function Checkout() {
       })
 
       // Gå till bekräftelsesidan
+      clearCart();
       navigate('/confirmation')
     } catch (error) {
       setError('Något gick fel. Är du inloggad?')

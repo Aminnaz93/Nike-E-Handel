@@ -48,6 +48,12 @@ export function CartProvider({ children }) {
     )
   }
 
+// Töm varukorgen  ← lägg till här
+const clearCart = () => {
+  setCartItems([])
+  localStorage.removeItem('cart')
+}
+
   // Räkna totalpris
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity, 0
@@ -65,7 +71,8 @@ export function CartProvider({ children }) {
       removeFromCart,
       updateQuantity,
       totalPrice,
-      cartCount
+      cartCount,
+      clearCart
     }}>
       {children}
     </CartContext.Provider>
