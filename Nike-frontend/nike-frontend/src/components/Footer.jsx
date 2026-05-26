@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom'
 
 function Footer() {
@@ -10,6 +9,7 @@ function Footer() {
           <p className="footerNavTitle">Navigation</p>
           <Link to="/" className="footerLink">Hem</Link>
           <Link to="/products" className="footerLink">Produkter</Link>
+          <Link to="/contact" className="footerLink">Kontakt</Link>
         </div>
         <div className="footerSocial">
           <p className="footerNavTitle">Följ oss</p>
