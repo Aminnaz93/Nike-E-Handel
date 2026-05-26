@@ -1,26 +1,33 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext, useEffect } from 'react'
 
 // Skapa context
 const CartContext = createContext()
 
 // Provider - omsluter hela appen
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([])
+
+  // Hämta från localStorage när appen startar
+  const [cartItems, setCartItems] = useState(() => {
+    const saved = localStorage.getItem('cart')
+    return saved ? JSON.parse(saved) : []
+  })
+
+  // Spara till localStorage när cartItems ändras
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems))
+  }, [cartItems])
 
   // Lägg till produkt i korgen
   const addToCart = (product) => {
     setCartItems(prev => {
-      // Kolla om produkten redan finns i korgen
       const exists = prev.find(item => item._id === product._id)
       if (exists) {
-        // Öka kvantiteten om den redan finns
         return prev.map(item =>
           item._id === product._id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         )
       }
-      // Lägg till ny produkt med quantity 1
       return [...prev, { ...product, quantity: 1 }]
     })
   }
