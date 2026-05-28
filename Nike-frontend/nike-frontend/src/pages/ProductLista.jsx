@@ -7,27 +7,31 @@ import { useCart } from '../context/CartContext'
 
 function ProductLista() {
 
+
   const { addToCart } = useCart()
 
 
-  const [products, setProducts] = useState([])
-  const [filter, setFilter] = useState('alla')
+  const [products, setProducts] = useState([]) // ALLA produkter från backend
+  const [filter, setFilter] = useState('alla') // vilket filter som är valt
 
+  //hämtar produkter 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const data = await getProducts()
+        const data = await getProducts() // anropar data från backend
         setProducts(data)
       } catch (error) {
-        console.log("Kunde inte hämta produkter", error)
+        console.log("Kunde inte hämta produkter", error) // om det inte gick att hämta produkterna
       }
     }
-    fetchProducts()
+    fetchProducts() // kör funktionen - så hämtar alla produkter från backend
   }, [])
 
+
+  //det här är filtrering
   const filteredProducts = filter === 'alla'
-    ? products
-    : products.filter(p => p.category === filter)
+    ? products //Hämtar alla produkter (VISAR ALLA PRODUKTER)
+    : products.filter(p => p.category === filter) // Detta visar bara den valda kategorin
 
   return (
     <div className="page">

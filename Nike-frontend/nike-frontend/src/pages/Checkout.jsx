@@ -46,7 +46,7 @@ function Checkout() {
       clearCart()
       navigate(`/confirmation?total=${totalPrice}`)
     } catch (error) {
-      setError('Något gick fel. Är du inloggad?')
+      setError('Något gick fel... Du måste vara inloggad för att betala!')
     }
   }
 
