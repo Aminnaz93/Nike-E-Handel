@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
-import axios from 'axios'
+import { createOrder } from '../services/api'
 import Footer from '../components/Footer'
 
 function Checkout() {
@@ -24,8 +24,6 @@ function Checkout() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const token = localStorage.getItem('token')
-
       const orderData = {
         items: cartItems.map(item => ({
           product: item._id,
@@ -37,12 +35,7 @@ function Checkout() {
         paymentMethod,
       }
 
-      await axios.post('http://localhost:3000/api/orders', orderData, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-
+      await createOrder(orderData)
       clearCart()
       navigate(`/confirmation?total=${totalPrice}`)
     } catch (error) {

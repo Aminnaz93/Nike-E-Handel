@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { registerUser } from '../services/api'
 import Footer from '../components/Footer'
 
 function Register() {
@@ -19,8 +19,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:3000/api/users/register', formData)
-      // Gå till login efter registrering
+      await registerUser(formData)
       navigate('/login')
     } catch (error) {
       setError('Något gick fel. Försök igen.')

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { loginUser } from '../services/api'
 import Footer from '../components/Footer'
 import { useAuth } from '../context/AuthContext'
 
@@ -17,10 +17,10 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/api/users/login', formData)
-      login(response.data.accessToken, {
-        name: response.data.name,
-        email: response.data.email
+      const response = await loginUser(formData)
+      login(response.accessToken, {
+        name: response.name,
+        email: response.email
       })
       navigate('/')
     } catch (error) {

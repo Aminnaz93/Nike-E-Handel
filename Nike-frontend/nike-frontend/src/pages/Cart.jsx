@@ -1,12 +1,18 @@
-import { useCart } from '../context/CartContext'
-import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext' // kundvagn context importerad
+import { Link } from 'react-router-dom' 
 import heroImg from '../assets/002-nike-logos-swoosh-white.jpg'
 import Footer from '../components/Footer'
 
 function Cart() {
+
+  //hämtar fyra olika funktioner från global CartContext( det är typ som en delad butik för hela appen.)
+  // cartItems = arrayen med alla produkter i varukorgen
+  // removeFromCart = funktion för att ta bort en produkt
+  // updateQuantity = funktion för att ändra antal
+  // totalPrice = redan uträknat totalpris
   const { cartItems, removeFromCart, updateQuantity, totalPrice } = useCart()
 
-  // Beräkna moms (25%)
+  // Beräkna momsen (25%)
   const moms = Math.round(totalPrice * 0.25)
 
   return (

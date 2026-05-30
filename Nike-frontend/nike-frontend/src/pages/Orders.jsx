@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { getOrders } from '../services/api'
 import Footer from '../components/Footer'
 
 function Orders() {
@@ -9,13 +9,8 @@ function Orders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const token = localStorage.getItem('token')
-        const response = await axios.get('http://localhost:3000/api/orders', {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        })
-        setOrders(response.data)
+        const data = await getOrders()
+        setOrders(data)
       } catch (error) {
         setError('Kunde inte hämta beställningar.')
       }

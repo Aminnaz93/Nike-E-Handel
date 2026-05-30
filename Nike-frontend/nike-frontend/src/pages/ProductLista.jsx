@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
-import { getProducts } from '../services/api'
+import { useState, useEffect } from 'react' // detta är react - hooks
+import { getProducts } from '../services/api' // detta är funktion som anropar backend
 import heroImg from '../assets/002-nike-logos-swoosh-white.jpg'
 import Footer from '../components/Footer'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../context/CartContext' // kundvagn context importerad
 
 
 function ProductLista() {
@@ -54,8 +54,10 @@ function ProductLista() {
 
         {/* Produktgrid */}
         <div className="productGrid">
+          {/* Den här loopar igenom alla produkter och ritar ut ett kort för varje produkt. */}
           {filteredProducts.map((product) => (
             <div key={product._id} className="productCard">
+              {/* visar produktbilden */}
               <img src={product.image} alt={product.name} className="productImg" />
               <div className="productInfo">
                 <p className="productName">{product.name}</p>
