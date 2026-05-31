@@ -917,3 +917,131 @@
   color: #666;
   margin-bottom: 8px;
 }
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   MOBIL
+   Gäller för skärmar under 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+  .navbar {
+    grid-template-columns: 1fr auto;
+    padding: 0 16px;
+    height: 70px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .loginBtn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .registerBtn {
+    display: none;
+  }
+
+  .right {
+    gap: 8px;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .heroImg {
+    width: 80%;
+  }
+
+  .productsSection {
+    padding: 24px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterRow {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filterBtn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .cartSection {
+    padding: 24px 16px;
+  }
+
+  .cartItem {
+    flex-wrap: wrap;
+  }
+
+  .cartSummary {
+    max-width: 100%;
+  }
+
+  .checkoutSection {
+    padding: 24px 16px;
+  }
+
+  .cardRow {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmSection {
+    padding: 40px 16px;
+  }
+
+  .confirmSummary {
+    max-width: 100%;
+  }
+
+  .ordersSection {
+    padding: 24px 16px;
+  }
+
+  .orderCard {
+    max-width: 100%;
+  }
+
+  .orderHeader {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer {
+    padding: 24px 16px 0;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .contactSection {
+    padding: 24px 16px;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+} 

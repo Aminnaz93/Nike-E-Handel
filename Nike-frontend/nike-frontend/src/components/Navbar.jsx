@@ -52,7 +52,7 @@ function Navbar() {
         ) : (
           <>
             <Link to="/login" className="loginBtn">LOGGA IN</Link>
-            <Link to="/register" className="loginBtn">REGISTRERA</Link>
+            <Link to="/register" className="loginBtn registerBtn">REGISTRERA</Link>
           </>
         )}
         <Link to="/cart" className="cartBtn">
