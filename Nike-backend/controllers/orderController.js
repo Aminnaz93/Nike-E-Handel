@@ -6,6 +6,7 @@ const Order = require("../models/orderModels");
 //POST /api/orders
 //Private - måste vara inloggad
 const createOrder = asyncHandler(async(req,res) => {
+    
     //Hämta data från body
     const { items,totalPrice, paymentMethod } = req.body;
 
