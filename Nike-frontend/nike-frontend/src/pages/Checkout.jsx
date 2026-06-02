@@ -1,14 +1,29 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
-import { createOrder } from '../services/api'
+
+import { useCart } from '../context/CartContext'// hämtar varukorgsdata från den globala CartContext
+import { createOrder } from '../services/api' // funktionen som skickar ordern till backend
+
+
 import Footer from '../components/Footer'
 
 function Checkout() {
+    // navigate används för att skicka användaren till en annan sida efter betalnin
   const navigate = useNavigate()
   const { cartItems, totalPrice, clearCart } = useCart()
+  // cartItems  = alla produkter i varukorgen
+  // totalPrice = redan uträknat totalpris från CartContext
+  // clearCart  = tömmer varukorgen efter betalning
   const [paymentMethod, setPaymentMethod] = useState('kontokort')
+    // håller koll på vilket betalsätt användaren valt
+  // startar på 'kontokort' som default
   const [error, setError] = useState('')
+    // håller koll på felmeddelande — t.ex om användaren inte är inloggad
+
+
+
+  // håller koll på vad användaren skriver i formuläret
+  // namn, email och telefon
   const [formData, setFormData] = useState({
     name: '',
     email: '',

@@ -16,7 +16,7 @@ function Home() {
   const [products, setProducts] = useState([]) //tom lista från början
 
 
-  //useeffect gör något när det händer 
+  //useeffect gör något när det händer - en trigger
   //hämtar produkter när sidan laddas. 
   useEffect(() => {
     const fetchProducts = async () => {

@@ -15,6 +15,7 @@ function ProductLista() {
   const [filter, setFilter] = useState('alla') // vilket filter som är valt
 
   //hämtar produkter 
+  //useeffect är som en trigger. gör något mär något händer 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
