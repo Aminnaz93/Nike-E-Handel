@@ -30,29 +30,42 @@ function Checkout() {
     phone: ''
   })
 
-  const moms = Math.round(totalPrice * 0.25)
+  const moms = Math.round(totalPrice * 0.25)   // räknar ut momsen (25%) på totalpriset
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    // uppdaterar rätt fält i formData när användaren skriver
+    // e.target.name = vilket fält (name/email/phone)
+    // e.target.value = vad användaren skrivits
   }
 
+
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault() // denna stoppar sidan från att ladda om när formulärert skickas
     try {
       const orderData = {
+        // bygger ihop order-objektet som ska skickas till backend
         items: cartItems.map(item => ({
-          product: item._id,
-          name: item.name,
-          price: item.price,
-          quantity: item.quantity
+          product: item._id,    // produktens id
+          name: item.name,      // produktens namn
+          price: item.price,    // produktens pris
+          quantity: item.quantity // antal
         })),
-        totalPrice,
-        paymentMethod,
+        totalPrice, // total priset
+        paymentMethod, // om det är kontokort elker swish 
       }
 
       await createOrder(orderData)
+      // skickar ordern till backend via api.js
+      // token läggs till automatiskt i request() — backend vet vem du är
       clearCart()
+      //tömmer varukorgen efter att ordern skapats
+
       navigate(`/confirmation?total=${totalPrice}`)
+      // skickar användaren till bekräftelsesidan
+      // totalpriset skickas med i URL:en så Confirmation kan visa det
     } catch (error) {
       setError('Något gick fel... Du måste vara inloggad för att betala!')
     }
