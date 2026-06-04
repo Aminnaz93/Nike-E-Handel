@@ -1,8 +1,13 @@
 import { createContext, useState, useContext, useEffect } from 'react'
 
+//CONTEXT ÄR ETT SÄTT ATT DELA DATA MELLAN KOMPONENTERNA UTAN ATT BEHÖVA SKICKA DEN SOM PROPS GENOM VARJE NIVÅ
+
+// Skapar en tom "behållare" för varukorgsdata.
 // Skapa context
 const CartContext = createContext()
 
+// CartProvider är den komponent som omsluter hela appen i main.jsx.
+// Allt som ligger inuti den får tillgång till varukorgen.
 // Provider - omsluter hela appen
 export function CartProvider({ children }) {
 
@@ -64,6 +69,7 @@ const clearCart = () => {
     (sum, item) => sum + item.quantity, 0
   )
 
+  // / Här "delar ut" vi all data och alla funktioner till resten av appen.
   return (
     <CartContext.Provider value={{
       cartItems,

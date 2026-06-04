@@ -1,5 +1,7 @@
 import { createContext, useState, useContext } from 'react'
 
+//CONTEXT ÄR ETT SÄTT ATT DELA DATA MELLAN KOMPONENTERNA UTAN ATT BEHÖVA SKICKA DEN SOM PROPS GENOM VARJE NIVÅ
+
 const AuthContext = createContext()
 
 export function AuthProvider({ children }) {
