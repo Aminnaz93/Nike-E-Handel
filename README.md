@@ -8,18 +8,18 @@ För att köra applikationen:
 ## Backend
 
 
-cd Nike-backend
-npm install
-npm run dev
+* cd Nike-backend
+* npm install
+* npm run dev
 
 Backend körs på: http://localhost:3000
 
 ## Frontend
 
 
-cd Nike-frontend/nike-frontend
-npm install
-npm run dev
+* cd Nike-frontend/nike-frontend
+* npm install
+* npm run dev
 
 Frontend körs på: http://localhost:5173
 
