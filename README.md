@@ -5,7 +5,7 @@ En Nike-inspirerad e-handelsapplikation
 
 För att köra applikationen: 
 
-Backend
+## Backend
 
 cd Nike-backend
 npm install
@@ -13,7 +13,7 @@ npm run dev
 
 Backend körs på: http://localhost:3000
 
-Frontend
+## Frontend
 
 cd Nike-frontend/nike-frontend
 npm install
