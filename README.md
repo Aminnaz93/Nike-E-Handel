@@ -7,6 +7,7 @@ För att köra applikationen:
 
 ## Backend
 
+
 cd Nike-backend
 npm install
 npm run dev
@@ -14,6 +15,7 @@ npm run dev
 Backend körs på: http://localhost:3000
 
 ## Frontend
+
 
 cd Nike-frontend/nike-frontend
 npm install
