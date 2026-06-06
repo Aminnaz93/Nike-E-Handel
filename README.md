@@ -7,7 +7,7 @@ För att köra applikationen:
 
 ## Backend
 
-
+```bash
 * cd Nike-backend
 * npm install
 * npm run dev
@@ -16,7 +16,7 @@ Backend körs på: http://localhost:3000
 
 ## Frontend
 
-
+```bash
 * cd Nike-frontend/nike-frontend
 * npm install
 * npm run dev
