@@ -27,11 +27,11 @@ Frontend körs på: http://localhost:5173
 ## Miljövariabler
 
 * VIKTIGT: Skapa en `.env` fil i `Nike-backend/` med följande innehåll:
-
+```
 * MONGO_URI=din_mongodb_uri
 * JWT_SECRET=din_hemliga_nyckel
 * PORT=3000
-
+```
 
 ## Paket
 
