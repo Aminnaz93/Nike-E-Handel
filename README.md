@@ -4,11 +4,11 @@ En Nike-inspirerad e-handelsapplikation
 
 
 ## Standardanvändare (testkonto)
-
+```
 * Email: User@email.se
 
 * Lösenord: password
-
+```
 
 För att köra applikationen: 
 
