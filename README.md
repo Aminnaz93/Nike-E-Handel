@@ -5,7 +5,7 @@ En Nike-inspirerad e-handelsapplikation
 
 ## Standardanvändare (testkonto)
 
-* Email: user@email.se
+* Email: User@email.se
 
 * Lösenord: password
 
