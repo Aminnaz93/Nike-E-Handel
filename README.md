@@ -3,7 +3,7 @@
 En Nike-inspirerad e-handelsapplikation
 
 
-## Standardanvändare (testkonto)
+## Default användare
 ```
 * Email: User@email.se
 
