@@ -10,7 +10,7 @@ En Nike-inspirerad e-handelsapplikation
 * Lösenord: password
 ```
 
-För att köra applikationen: 
+## För att köra applikationen: 
 
 ## Backend
 
